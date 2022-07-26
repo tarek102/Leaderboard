@@ -33,7 +33,7 @@ body {
   padding: 0;
 }
 
-.add-score-form form{
+.add-score-form form {
   display: flex;
   flex-direction: column;
 }
