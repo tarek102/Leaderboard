@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-sec {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.recent-scores-top {
+  display: flex;
+  align-items: center;
+}
+
+.recent-scores-bottom {
+  border: 2px solid black;
+  padding: 0;
+}
+
+.recent-scores-bottom ul {
+  padding: 0;
+}
+
+.recent-scores-bottom ul li {
+  list-style: none;
+  border: 1px solid;
+  padding: 0;
+}
+
+.recent-scores-bottom ul li h5 {
+  padding: 0;
+}
+
+.add-score-form form{
+  display: flex;
+  flex-direction: column;
+}
+
+.add-score-form form input {
+  margin: 5px 0;
+}
