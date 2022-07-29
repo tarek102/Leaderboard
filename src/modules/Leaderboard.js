@@ -1,16 +1,20 @@
+import Ui from './Ui';
+
+const newObj = new Ui();
+
 export default class Leaderboard {
   constructor(url) {
     this.url = url;
   }
 
   getData = async (url) => {
-    await fetch(url, {
+    const response = await fetch(url, {
       method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        localStorage.setItem('list', JSON.stringify(data.result));
-      });
+    });
+    const res = await response.json();
+    const responseArr = await res.result;
+    newObj.display(responseArr);
+    return responseArr;
   };
 
   addData = async (url, user, score) => {
