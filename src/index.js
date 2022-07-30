@@ -7,7 +7,7 @@ const submitBtn = document.querySelector('#submit-btn');
 const inputScore = document.querySelector('#input-score');
 const inputName = document.querySelector('#input-name');
 const refreshBtn = document.querySelector('#refresh-btn');
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a1N4fJIEz5DoPARzxJxn/scores/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/r9awy93xMTEhmle1FDmi/scores/';
 const leaderboard = new Leaderboard(url);
 
 leaderboard.getData(url);
@@ -15,18 +15,13 @@ leaderboard.getData(url);
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (inputName.value === '' || inputScore.value === '') return;
-  
-    if (isNaN(inputScore.value)) {
-      console.log("not a number");
-    } else {
-      
+
+  if (!Number.isNaN(Number(inputScore.value))) {
     leaderboard.addData(url, inputName.value, inputScore.value);
 
     inputName.value = '';
     inputScore.value = '';
-
-    }
-
+  }
 });
 
 refreshBtn.addEventListener('click', async () => {
