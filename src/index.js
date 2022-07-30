@@ -15,10 +15,18 @@ leaderboard.getData(url);
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (inputName.value === '' || inputScore.value === '') return;
-  leaderboard.addData(url, inputName.value, inputScore.value);
+  
+    if (isNaN(inputScore.value)) {
+      console.log("not a number");
+    } else {
+      
+    leaderboard.addData(url, inputName.value, inputScore.value);
 
-  inputName.value = '';
-  inputScore.value = '';
+    inputName.value = '';
+    inputScore.value = '';
+
+    }
+
 });
 
 refreshBtn.addEventListener('click', async () => {
