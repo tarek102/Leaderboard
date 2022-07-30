@@ -4,14 +4,28 @@ body {
   box-sizing: border-box;
 }
 
+.main {
+  margin: 0;
+  padding: 1% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(81, 187, 187);
+  height: 100vh;
+}
+
 .main-sec {
   display: flex;
+  width: 100%;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .recent-scores-top {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .recent-scores-bottom {
@@ -40,4 +54,31 @@ body {
 
 .add-score-form form input {
   margin: 5px 0;
+}
+
+#input-name,
+#input-score {
+  border: 2px solid black;
+  width: 100%;
+  height: 20px;
+}
+
+#submit-btn {
+  width: fit-content;
+  align-self: flex-end;
+  border: 2px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+#refresh-btn {
+  width: fit-content;
+  border: 2px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  margin-left: 10px;
+}
+
+.new-li:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
 }
